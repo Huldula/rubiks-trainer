@@ -11,9 +11,6 @@ export class F2lComponent implements OnInit {
   public hint: string;
   public showHints: boolean;
 
-  private MIN = 2;
-  private MAX = 9;
-
   public algos = [
     '',
     '',
@@ -24,8 +21,20 @@ export class F2lComponent implements OnInit {
     'd (R\' U R U\') (R\' U\' R)',
     'U\' (R U R\' U) (R U R\')',
     'R U\' R\' U R U\' R\' U2 R U\' R\'',
-    'U\' (R U\' R\' U) (R U R\')'
+    'U\' (R U\' R\' U) (R U R\')',
+
+    'U\' (R U R\') U2 (R U\' R\')',
+    'U\' (R U2\' R\') U2 (R U\' R\')',
+    'd (R\' U\' R) U2\' (R\' U R)',
+    'd (R\' U2 R) U2\' (R\' U R)',
+    'U (R U2 R\') U (R U\' R\')',
+    '(R U\' R\') U2 (R U R\')',
+    'y\' U\' (R\' U2 R) U\' (R\' U R)',
+    'y\' (R\' U R) U2 (R\' U\' R)'
   ];
+
+  public MIN = 2;
+  public MAX = this.algos.length - 1;
 
   constructor() { }
 
